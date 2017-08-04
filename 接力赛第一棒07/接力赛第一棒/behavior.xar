@@ -342,25 +342,27 @@ class MyClass(GeneratedClass):
 
 		self.tts = ALProxy("ALTextToSpeech")
 		self.sentences = {
-			"Chinese" : " 我是第一棒，请按中间按钮 ",
-			"English" : " Hello ",
-			"French" : " Bonjour ",
+			"Arabic" : "  ",
+			"Czech" : " Ahoj ",
+			"Danish" : " Hej ",
 			"German" : " Hallo ",
+			"Greek" : "  ",
+			"English" : " Hello ",
+			"Spanish" : " Hola ",
+			"Finnish" : " Hei ",
+			"French" : " Bonjour ",
 			"Italian" : " Ciao ",
 			"Japanese" : " こんにちは ",
 			"Korean" : " 안녕하세요 ",
-			"Portuguese" : " Olá ",
-			"Brazilian" : " Olá ",
-			"Spanish" : " Hola ",
-			"Arabic" : "  ",
-			"Polish" : " Cześć ",
-			"Czech" : " Ahoj ",
 			"Dutch" : " Hallo ",
-			"Danish" : " Hej ",
-			"Finnish" : " Hei ",
-			"Swedish" : " Hallå ",
+			"Norwegian" : "  ",
+			"Polish" : " Cześć ",
+			"Brazilian" : " Olá ",
+			"Portuguese" : " Olá ",
 			"Russian" : " Привет ",
-			"Turkish" : " Merhaba "
+			"Swedish" : " Hallå ",
+			"Turkish" : " Merhaba ",
+			"Chinese" : "  "
 		}
 
 	def onInput_onStart(self):
@@ -369,18 +371,33 @@ class MyClass(GeneratedClass):
 </content>
                                                 </script>
                                                 <pluginContent>
-                                                    <chinese>
-                                                        <![CDATA[我是第一棒，请按中间按钮]]>
-</chinese>
-                                                    <english>
-                                                        <![CDATA[Hello]]>
-</english>
-                                                    <french>
-                                                        <![CDATA[Bonjour]]>
-</french>
+                                                    <arabic>
+                                                        <![CDATA[]]>
+</arabic>
+                                                    <czech>
+                                                        <![CDATA[Ahoj]]>
+</czech>
+                                                    <danish>
+                                                        <![CDATA[Hej]]>
+</danish>
                                                     <german>
                                                         <![CDATA[Hallo]]>
 </german>
+                                                    <greek>
+                                                        <![CDATA[]]>
+</greek>
+                                                    <english>
+                                                        <![CDATA[Hello]]>
+</english>
+                                                    <spanish>
+                                                        <![CDATA[Hola]]>
+</spanish>
+                                                    <finnish>
+                                                        <![CDATA[Hei]]>
+</finnish>
+                                                    <french>
+                                                        <![CDATA[Bonjour]]>
+</french>
                                                     <italian>
                                                         <![CDATA[Ciao]]>
 </italian>
@@ -390,43 +407,34 @@ class MyClass(GeneratedClass):
                                                     <korean>
                                                         <![CDATA[안녕하세요]]>
 </korean>
-                                                    <portuguese>
-                                                        <![CDATA[Olá]]>
-</portuguese>
-                                                    <brazilian>
-                                                        <![CDATA[Olá]]>
-</brazilian>
-                                                    <spanish>
-                                                        <![CDATA[Hola]]>
-</spanish>
-                                                    <arabic>
-                                                        <![CDATA[]]>
-</arabic>
-                                                    <polish>
-                                                        <![CDATA[Cześć]]>
-</polish>
-                                                    <czech>
-                                                        <![CDATA[Ahoj]]>
-</czech>
                                                     <dutch>
                                                         <![CDATA[Hallo]]>
 </dutch>
-                                                    <danish>
-                                                        <![CDATA[Hej]]>
-</danish>
-                                                    <finnish>
-                                                        <![CDATA[Hei]]>
-</finnish>
-                                                    <swedish>
-                                                        <![CDATA[Hallå]]>
-</swedish>
+                                                    <norwegian>
+                                                        <![CDATA[]]>
+</norwegian>
+                                                    <polish>
+                                                        <![CDATA[Cześć]]>
+</polish>
+                                                    <brazilian>
+                                                        <![CDATA[Olá]]>
+</brazilian>
+                                                    <portuguese>
+                                                        <![CDATA[Olá]]>
+</portuguese>
                                                     <russian>
                                                         <![CDATA[Привет]]>
 </russian>
+                                                    <swedish>
+                                                        <![CDATA[Hallå]]>
+</swedish>
                                                     <turkish>
                                                         <![CDATA[Merhaba]]>
 </turkish>
-                                                    <language>20</language>
+                                                    <chinese>
+                                                        <![CDATA[]]>
+</chinese>
+                                                    <language>-1</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -755,7 +763,7 @@ class MyClass(GeneratedClass):
                             </Parameter>
                             <Resource name="Speech" type="Lock" timeout="0" />
                         </Box>
-                        <Box name="say2" id="5" localization="8" tooltip="" x="556" y="456">
+                        <Box name="say2" id="5" localization="8" tooltip="" x="503" y="562">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
@@ -868,7 +876,7 @@ class MyClass(GeneratedClass):
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="指令盒行为结束时，送出信号。" id="4" />
                         </Box>
-                        <Box name="Sound Peak" id="8" localization="8" tooltip="Detect sound peaks.&#x0A;Each time a sound peak is detected, the onPeak output is stimulated.&#x0A;&#x0A;Note: You can set the sensibility to detect the sound peak in parameters.&#x0A;&#x0A;V1.1.0" x="786" y="277">
+                        <Box name="Sound Peak" id="8" localization="8" tooltip="Detect sound peaks.&#x0A;Each time a sound peak is detected, the onPeak output is stimulated.&#x0A;&#x0A;Note: You can set the sensibility to detect the sound peak in parameters.&#x0A;&#x0A;V1.1.0" x="781" y="397">
                             <bitmap>media/images/box/sensors/STM.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1037,7 +1045,7 @@ class MyClass(GeneratedClass):
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="say3" id="9" localization="8" tooltip="" x="1059" y="278">
+                        <Box name="say3" id="9" localization="8" tooltip="" x="1048" y="400">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1069,7 +1077,7 @@ class MyClass(GeneratedClass):
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="指令盒行为结束时，送出信号。" id="4" />
                         </Box>
-                        <Box name="Twinkle" id="10" localization="8" tooltip="The selected LEDs flash on and off during the time defined in parameters." x="793" y="459">
+                        <Box name="Twinkle" id="10" localization="8" tooltip="The selected LEDs flash on and off during the time defined in parameters." x="1055" y="290">
                             <bitmap>media/images/box/interaction/LED.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1266,7 +1274,7 @@ class MyClass(GeneratedClass):
                                 </BehaviorLayer>
                             </Timeline>
                         </Box>
-                        <Box name="WalkWithLine" id="15" localization="8" tooltip="识别白线，沿着白线走。" x="984" y="400">
+                        <Box name="WalkWithLine" id="15" localization="8" tooltip="识别白线，沿着白线走。" x="1042" y="543">
                             <bitmap>media/images/box/box-python-script.png</bitmap>
                             <script language="4">
                                 <content>
@@ -1441,6 +1449,54 @@ class MyClass(GeneratedClass):
                             <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
                             <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="指令盒行为结束时，送出信号。" id="4" />
                         </Box>
+                        <Box name="Delay" id="12" localization="8" tooltip="Wait a moment before triggering the output. &#x0A;Can be stopped anytime. &#x0A;Multiple inputs will trigger multiple outputs." x="792" y="540">
+                            <bitmap>media/images/box/wait.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self, False)
+
+    def onLoad(self):
+        self.delayed = []
+
+    def onUnload(self):
+        self.cancelDelays()
+
+    def cancelDelays(self):
+        cancel_list = list(self.delayed)
+        for d in cancel_list:
+            d.cancel()
+
+    def cleanDelay(self, fut, fut_ref):
+        self.delayed.remove(fut)
+
+    def triggerOutput(self):
+        self.timerOutput()
+
+    def onInput_onStart(self):
+        import qi
+        import functools
+        delay_future = qi.async(self.triggerOutput, delay=int(self.getParameter("Timeout (s)") * 1000 * 1000))
+        # keep the async operation in an array for cancel
+        # and remove it when it is finished in the callback
+        self.delayed.append(delay_future)
+        bound_clean = functools.partial(self.cleanDelay, delay_future)
+        delay_future.addCallback(bound_clean)
+
+    def onInput_onStop(self):
+        if self.getParameter("Trigger timerOutput if cancelled") and self.delayed:
+            self.timerOutput()
+        self.onUnload()]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the Delay box with the configured timeout value." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the wait and stimulate the output." id="3" />
+                            <Output name="timerOutput" type="1" type_size="1" nature="1" inner="0" tooltip="Send a bang once delay set in parameters is elapsed, or if the box is stopped and the appropriate parameter is set." id="4" />
+                            <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
+                            <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently delaying at least one signal and cancelled, output will be stimulated." id="6" />
+                        </Box>
                         <Link inputowner="1" indexofinput="3" outputowner="2" indexofoutput="6" />
                         <Link inputowner="1" indexofinput="4" outputowner="2" indexofoutput="7" />
                         <Link inputowner="1" indexofinput="5" outputowner="2" indexofoutput="8" />
@@ -1455,9 +1511,11 @@ class MyClass(GeneratedClass):
                         <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="10" indexofinput="2" outputowner="6" indexofoutput="4" />
                         <Link inputowner="9" indexofinput="2" outputowner="8" indexofoutput="5" />
-                        <Link inputowner="15" indexofinput="2" outputowner="8" indexofoutput="5" />
                         <Link inputowner="10" indexofinput="3" outputowner="8" indexofoutput="5" />
                         <Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="4" />
+                        <Link inputowner="12" indexofinput="2" outputowner="6" indexofoutput="4" />
+                        <Link inputowner="12" indexofinput="3" outputowner="8" indexofoutput="5" />
+                        <Link inputowner="15" indexofinput="2" outputowner="12" indexofoutput="4" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>
