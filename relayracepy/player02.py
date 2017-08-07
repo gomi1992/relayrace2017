@@ -73,10 +73,10 @@ class MyClass():
             imageHeight = naoImage[1]
             array = naoImage[6]
 
-            im = Image.fromstring("RGB", (imageWidth, imageHeight), array)
-            cv2.imshow('Video', im)
+            im = Image.frombytes("RGB", (imageWidth, imageHeight), array)
             # -----------
             frame = np.asarray(im)
+            cv2.imshow('Video', frame)
             # 对读取的图像矩阵进行计算，分析第一台机器人是否压线
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
             lowera = np.array([0, 0, 221])
@@ -128,6 +128,7 @@ class MyClass():
                 self.motionProxy.moveTo(0.0, 0.0, math.pi / 2, moveConfig)
                 self.motionProxy.moveTo(0.2, 0.0, 0.0, moveConfig)
                 break
+            cv2.waitKey(10)
 
         self.camProxy.unsubscribe(nameId)
         print "camProxy has unsubscribe"
