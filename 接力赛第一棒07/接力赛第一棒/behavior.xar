@@ -1302,10 +1302,10 @@ class MyClass(GeneratedClass):
     def onInput_onStart(self):
         i = 0
         #步态设置
-        maxstepx = 0.04
+        maxstepx = 0.06
         maxstepy = 0.14
         maxsteptheta = 0.4
-        maxstepfrequency = 0.5
+        maxstepfrequency = 0.6
         stepheight = 0.02
         torsowx = 0.0
         torsowy = 0.0
@@ -1497,6 +1497,38 @@ class MyClass(GeneratedClass):
                             <Parameter name="Timeout (s)" inherits_from_parent="0" content_type="2" value="7" default_value="1" min="0" max="5000" tooltip="Duration the box waits before stimulating the output." id="5" />
                             <Parameter name="Trigger timerOutput if cancelled" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="If the box is currently delaying at least one signal and cancelled, output will be stimulated." id="6" />
                         </Box>
+                        <Box name="say4" id="7" localization="8" tooltip="" x="971" y="659">
+                            <bitmap>media/images/box/box-python-script.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        self.tts = ALProxy("ALTextToSpeech")
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        self.tts.say("出发延时")
+        #self.onStopped() #activate the output of the box
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="指令盒行为结束时，送出信号。" id="4" />
+                        </Box>
                         <Link inputowner="1" indexofinput="3" outputowner="2" indexofoutput="6" />
                         <Link inputowner="1" indexofinput="4" outputowner="2" indexofoutput="7" />
                         <Link inputowner="1" indexofinput="5" outputowner="2" indexofoutput="8" />
@@ -1510,12 +1542,15 @@ class MyClass(GeneratedClass):
                         <Link inputowner="14" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
                         <Link inputowner="10" indexofinput="2" outputowner="6" indexofoutput="4" />
-                        <Link inputowner="9" indexofinput="2" outputowner="8" indexofoutput="5" />
-                        <Link inputowner="10" indexofinput="3" outputowner="8" indexofoutput="5" />
                         <Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="4" />
                         <Link inputowner="12" indexofinput="2" outputowner="6" indexofoutput="4" />
-                        <Link inputowner="12" indexofinput="3" outputowner="8" indexofoutput="5" />
+                        <Link inputowner="12" indexofinput="3" outputowner="8" indexofoutput="6" />
+                        <Link inputowner="9" indexofinput="2" outputowner="8" indexofoutput="6" />
+                        <Link inputowner="10" indexofinput="3" outputowner="8" indexofoutput="6" />
+                        <Link inputowner="7" indexofinput="2" outputowner="12" indexofoutput="4" />
                         <Link inputowner="15" indexofinput="2" outputowner="12" indexofoutput="4" />
+                        <Link inputowner="15" indexofinput="2" outputowner="8" indexofoutput="6" />
+                        <Link inputowner="8" indexofinput="3" outputowner="12" indexofoutput="4" />
                     </Diagram>
                 </BehaviorKeyframe>
             </BehaviorLayer>

@@ -29,7 +29,7 @@ class MyClass():
         # 步态设置
         maxstepx = 0.04
         maxstepy = 0.14
-        maxsteptheta = 0.4
+        maxsteptheta = 0.2
         maxstepfrequency = 0.5
         stepheight = 0.02
         torsowx = 0.0
@@ -120,9 +120,14 @@ class MyClass():
 
             if single_line_value[0] != 0:
                 # motionProxy.move(0.1,0,0,moveConfig)
-                print "there is white line"
-                self.motionProxy.moveTo(0.0, 0.0, 0.0, moveConfig)
-
+                print "there is white line:" + str(single_line_value[1])
+                if single_line_value[1] > 1:
+                    print "no line"
+                    self.motionProxy.moveTo(0.0, 0.0, math.pi / 2, moveConfig)
+                    self.motionProxy.moveTo(0.2, 0.0, 0.0, moveConfig)
+                    break
+                else:
+                    self.motionProxy.moveTo(0.0, 0.0, 0.0, moveConfig)
             else:
                 print "no line"
                 self.motionProxy.moveTo(0.0, 0.0, math.pi / 2, moveConfig)

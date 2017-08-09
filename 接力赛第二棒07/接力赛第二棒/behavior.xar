@@ -342,25 +342,27 @@ class MyClass(GeneratedClass):
 
 		self.tts = ALProxy("ALTextToSpeech")
 		self.sentences = {
-			"Chinese" : " 我是第二棒，请连击两次中间按钮 ",
-			"English" : " Hello ",
-			"French" : " Bonjour ",
+			"Arabic" : "  ",
+			"Czech" : " Ahoj ",
+			"Danish" : " Hej ",
 			"German" : " Hallo ",
+			"Greek" : "  ",
+			"English" : " Hello ",
+			"Spanish" : " Hola ",
+			"Finnish" : " Hei ",
+			"French" : " Bonjour ",
 			"Italian" : " Ciao ",
 			"Japanese" : " こんにちは ",
 			"Korean" : " 안녕하세요 ",
-			"Portuguese" : " Olá ",
-			"Brazilian" : " Olá ",
-			"Spanish" : " Hola ",
-			"Arabic" : "  ",
-			"Polish" : " Cześć ",
-			"Czech" : " Ahoj ",
 			"Dutch" : " Hallo ",
-			"Danish" : " Hej ",
-			"Finnish" : " Hei ",
-			"Swedish" : " Hallå ",
+			"Norwegian" : "  ",
+			"Polish" : " Cześć ",
+			"Brazilian" : " Olá ",
+			"Portuguese" : " Olá ",
 			"Russian" : " Привет ",
-			"Turkish" : " Merhaba "
+			"Swedish" : " Hallå ",
+			"Turkish" : " Merhaba ",
+			"Chinese" : "  "
 		}
 
 	def onInput_onStart(self):
@@ -369,18 +371,33 @@ class MyClass(GeneratedClass):
 </content>
                                                 </script>
                                                 <pluginContent>
-                                                    <chinese>
-                                                        <![CDATA[我是第二棒，请连击两次中间按钮]]>
-</chinese>
-                                                    <english>
-                                                        <![CDATA[Hello]]>
-</english>
-                                                    <french>
-                                                        <![CDATA[Bonjour]]>
-</french>
+                                                    <arabic>
+                                                        <![CDATA[]]>
+</arabic>
+                                                    <czech>
+                                                        <![CDATA[Ahoj]]>
+</czech>
+                                                    <danish>
+                                                        <![CDATA[Hej]]>
+</danish>
                                                     <german>
                                                         <![CDATA[Hallo]]>
 </german>
+                                                    <greek>
+                                                        <![CDATA[]]>
+</greek>
+                                                    <english>
+                                                        <![CDATA[Hello]]>
+</english>
+                                                    <spanish>
+                                                        <![CDATA[Hola]]>
+</spanish>
+                                                    <finnish>
+                                                        <![CDATA[Hei]]>
+</finnish>
+                                                    <french>
+                                                        <![CDATA[Bonjour]]>
+</french>
                                                     <italian>
                                                         <![CDATA[Ciao]]>
 </italian>
@@ -390,43 +407,34 @@ class MyClass(GeneratedClass):
                                                     <korean>
                                                         <![CDATA[안녕하세요]]>
 </korean>
-                                                    <portuguese>
-                                                        <![CDATA[Olá]]>
-</portuguese>
-                                                    <brazilian>
-                                                        <![CDATA[Olá]]>
-</brazilian>
-                                                    <spanish>
-                                                        <![CDATA[Hola]]>
-</spanish>
-                                                    <arabic>
-                                                        <![CDATA[]]>
-</arabic>
-                                                    <polish>
-                                                        <![CDATA[Cześć]]>
-</polish>
-                                                    <czech>
-                                                        <![CDATA[Ahoj]]>
-</czech>
                                                     <dutch>
                                                         <![CDATA[Hallo]]>
 </dutch>
-                                                    <danish>
-                                                        <![CDATA[Hej]]>
-</danish>
-                                                    <finnish>
-                                                        <![CDATA[Hei]]>
-</finnish>
-                                                    <swedish>
-                                                        <![CDATA[Hallå]]>
-</swedish>
+                                                    <norwegian>
+                                                        <![CDATA[]]>
+</norwegian>
+                                                    <polish>
+                                                        <![CDATA[Cześć]]>
+</polish>
+                                                    <brazilian>
+                                                        <![CDATA[Olá]]>
+</brazilian>
+                                                    <portuguese>
+                                                        <![CDATA[Olá]]>
+</portuguese>
                                                     <russian>
                                                         <![CDATA[Привет]]>
 </russian>
+                                                    <swedish>
+                                                        <![CDATA[Hallå]]>
+</swedish>
                                                     <turkish>
                                                         <![CDATA[Merhaba]]>
 </turkish>
-                                                    <language>0</language>
+                                                    <chinese>
+                                                        <![CDATA[]]>
+</chinese>
+                                                    <language>5</language>
                                                 </pluginContent>
                                                 <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
                                                 <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Data is sent on the output when this input is stimulated." id="2" />
@@ -1253,10 +1261,10 @@ class MyClass(GeneratedClass):
     def onInput_onStart(self):
         i = 0
         #步态设置
-        maxstepx = 0.04
+        maxstepx = 0.06
         maxstepy = 0.14
         maxsteptheta = 0.4
-        maxstepfrequency = 0.5
+        maxstepfrequency = 0.6
         stepheight = 0.02
         torsowx = 0.0
         torsowy = 0.0

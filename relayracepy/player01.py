@@ -7,6 +7,7 @@ import math
 from PIL import Image
 import vision_definitions
 import time
+import datetime
 
 from naoqi import ALProxy
 
@@ -27,10 +28,10 @@ class MyClass():
     def onInput_onStart(self):
         i = 0
         # 步态设置
-        maxstepx = 0.04
+        maxstepx = 0.06
         maxstepy = 0.14
         maxsteptheta = 0.4
-        maxstepfrequency = 0.5
+        maxstepfrequency = 0.6
         stepheight = 0.02
         torsowx = 0.0
         torsowy = 0.0
@@ -191,4 +192,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     my = MyClass(args.ip, args.port)
+    starttime = datetime.datetime.now()
     my.onInput_onStart()
+    endtime = datetime.datetime.now()
+    print (endtime - starttime).seconds
